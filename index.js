@@ -17,7 +17,7 @@
  */
 
 var exports = {
-	VERSION: '0.10.0',
+	VERSION: '0.10.1',
 	MODULE_NAME: 'Runtime.Task',
 }
 
@@ -36,7 +36,6 @@ function add(name)
 
 add("Runtime.Task.Entry");
 add("Runtime.Task.TaskDriver");
-add("Runtime.Task.TaskOutputProvider");
 add("Runtime.Task.TaskMethod");
 add("Runtime.Task.TaskList");
 add("Runtime.Task.CronTask");

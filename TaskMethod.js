@@ -21,9 +21,9 @@ if (typeof Runtime == 'undefined') Runtime = {};
 if (typeof Runtime.Task == 'undefined') Runtime.Task = {};
 Runtime.Task.TaskMethod = function(ctx)
 {
-	use("Runtime.CoreStruct").apply(this, arguments);
+	use("Runtime.BaseStruct").apply(this, arguments);
 };
-Runtime.Task.TaskMethod.prototype = Object.create(use("Runtime.CoreStruct").prototype);
+Runtime.Task.TaskMethod.prototype = Object.create(use("Runtime.BaseStruct").prototype);
 Runtime.Task.TaskMethod.prototype.constructor = Runtime.Task.TaskMethod;
 Object.assign(Runtime.Task.TaskMethod.prototype,
 {
@@ -35,7 +35,7 @@ Object.assign(Runtime.Task.TaskMethod.prototype,
 		this.method_name = "";
 		this.alias = "";
 		this.description = "";
-		use("Runtime.CoreStruct").prototype._init.call(this,ctx);
+		use("Runtime.BaseStruct").prototype._init.call(this,ctx);
 	},
 	assignObject: function(ctx,o)
 	{
@@ -46,7 +46,7 @@ Object.assign(Runtime.Task.TaskMethod.prototype,
 			this.alias = o.alias;
 			this.description = o.description;
 		}
-		use("Runtime.CoreStruct").prototype.assignObject.call(this,ctx,o);
+		use("Runtime.BaseStruct").prototype.assignObject.call(this,ctx,o);
 	},
 	assignValue: function(ctx,k,v)
 	{
@@ -54,7 +54,7 @@ Object.assign(Runtime.Task.TaskMethod.prototype,
 		else if (k == "method_name")this.method_name = v;
 		else if (k == "alias")this.alias = v;
 		else if (k == "description")this.description = v;
-		else use("Runtime.CoreStruct").prototype.assignValue.call(this,ctx,k,v);
+		else use("Runtime.BaseStruct").prototype.assignValue.call(this,ctx,k,v);
 	},
 	takeValue: function(ctx,k,d)
 	{
@@ -63,14 +63,14 @@ Object.assign(Runtime.Task.TaskMethod.prototype,
 		else if (k == "method_name")return this.method_name;
 		else if (k == "alias")return this.alias;
 		else if (k == "description")return this.description;
-		return use("Runtime.CoreStruct").prototype.takeValue.call(this,ctx,k,d);
+		return use("Runtime.BaseStruct").prototype.takeValue.call(this,ctx,k,d);
 	},
 	getClassName: function(ctx)
 	{
 		return "Runtime.Task.TaskMethod";
 	},
 });
-Object.assign(Runtime.Task.TaskMethod, use("Runtime.CoreStruct"));
+Object.assign(Runtime.Task.TaskMethod, use("Runtime.BaseStruct"));
 Object.assign(Runtime.Task.TaskMethod,
 {
 	/* ======================= Class Init Functions ======================= */
@@ -84,7 +84,7 @@ Object.assign(Runtime.Task.TaskMethod,
 	},
 	getParentClassName: function()
 	{
-		return "Runtime.CoreStruct";
+		return "Runtime.BaseStruct";
 	},
 	getClassInfo: function(ctx)
 	{

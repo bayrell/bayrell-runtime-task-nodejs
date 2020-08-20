@@ -58,7 +58,7 @@ Object.assign(Runtime.Task.ModuleDescription,
 	 */
 	getModuleVersion: function(ctx)
 	{
-		return "0.9.0";
+		return "0.10.1";
 	},
 	/**
 	 * Returns required modules
@@ -75,8 +75,7 @@ Object.assign(Runtime.Task.ModuleDescription,
 	{
 		var __v0 = use("Runtime.Core.Entity");
 		var __v1 = use("Runtime.Core.Driver");
-		var __v2 = use("Runtime.Core.Provider");
-		return use("Runtime.Collection").from([new __v0(ctx, use("Runtime.Dict").from({"name":"Runtime.Task.Tasks"})),new __v1(ctx, use("Runtime.Dict").from({"name":"Runtime.Task.TaskDriver"})),new __v2(ctx, use("Runtime.Dict").from({"name":"Runtime.Task.TaskOutputProvider"}))]);
+		return use("Runtime.Collection").from([new __v0(ctx, use("Runtime.Dict").from({"name":"Runtime.Task.Tasks"})),new __v1(ctx, use("Runtime.Dict").from({"name":"Runtime.Task.TaskDriver"}))]);
 	},
 	/* ======================= Class Init Functions ======================= */
 	getCurrentNamespace: function()

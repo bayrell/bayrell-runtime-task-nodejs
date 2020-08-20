@@ -47,9 +47,9 @@ Object.assign(Runtime.Task.Entry,
 	/**
 	 * Run cron
 	 */
-	run: async function(ctx)
+	appRun: async function(ctx)
 	{
-		var output = ctx.getProvider(ctx, "Runtime.Task.TaskOutputProvider");
+		var output = ctx.getDriver(ctx, "Runtime.Task.TaskDriver");
 		var __v0 = use("Runtime.lib");
 		var task_lists = ctx.entities.filter(ctx, __v0.isInstance(ctx, "Runtime.Task.TaskList"));
 		var sz = ctx.cli_args.count(ctx);

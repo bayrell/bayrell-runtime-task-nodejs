@@ -48,6 +48,13 @@ Object.assign(Runtime.Task.TaskDriver.prototype,
 		}
 		process.stdout.write(msg);
 	},
+	/**
+	 * Write line
+	 */
+	writeln: function(ctx, msg)
+	{
+		this.write(ctx, msg + use("Runtime.rtl").toStr("\n"));
+	},
 	_init: function(ctx)
 	{
 		this.output_cli = false;
