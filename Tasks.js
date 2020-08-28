@@ -64,8 +64,8 @@ Object.assign(Runtime.Task.Tasks,
 				for (var j = 0;j < arr.count(ctx);j++)
 				{
 					var item = arr.item(ctx, j);
-					var __v0 = use("Runtime.Task.TaskMethod");
-					if (item instanceof __v0)
+					var __v3 = use("Runtime.Task.TaskMethod");
+					if (item instanceof __v3)
 					{
 						item = item.copy(ctx, use("Runtime.Dict").from({"class_name":class_name,"method_name":method_name}));
 						items.push(ctx, item);
@@ -80,7 +80,7 @@ Object.assign(Runtime.Task.Tasks,
 	 */
 	entities: async function(ctx)
 	{
-		var output = ctx.getProvider(ctx, "Runtime.Task.TaskOutputProvider");
+		var output = ctx.getDriver(ctx, "Runtime.Task.TaskDriver");
 		output.writeln(ctx, "List entities:");
 		var entities = ctx.entities;
 		if (ctx.cli_args.get(ctx, 2, "") != "")

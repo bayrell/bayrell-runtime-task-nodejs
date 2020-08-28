@@ -90,8 +90,8 @@ Object.assign(Runtime.Task.Entry,
 				{
 					return true;
 				}
-				var __v0 = use("Runtime.rs");
-				var arr = __v0.split(ctx, "::", cmd);
+				var __v3 = use("Runtime.rs");
+				var arr = __v3.split(ctx, "::", cmd);
 				var class_name = arr.get(ctx, 0, "");
 				var method_name = arr.get(ctx, 1, "");
 				if (m.class_name == class_name && m.method_name == method_name)
