@@ -115,7 +115,7 @@ Object.assign(Runtime.Task.Tasks,
 		var __v0 = use("Runtime.Task.TaskList");
 		var Collection = use("Runtime.Collection");
 		var Dict = use("Runtime.Dict");
-		var IntrospectionInfo = use("Runtime.Annotations.IntrospectionInfo");
+		var IntrospectionInfo = use("Runtime.IntrospectionInfo");
 		return new IntrospectionInfo(ctx, {
 			"kind": IntrospectionInfo.ITEM_CLASS,
 			"class_name": "Runtime.Task.Tasks",
@@ -135,7 +135,7 @@ Object.assign(Runtime.Task.Tasks,
 	{
 		var Collection = use("Runtime.Collection");
 		var Dict = use("Runtime.Dict");
-		var IntrospectionInfo = use("Runtime.Annotations.IntrospectionInfo");
+		var IntrospectionInfo = use("Runtime.IntrospectionInfo");
 		return null;
 	},
 	getMethodsList: function(ctx)
@@ -153,7 +153,7 @@ Object.assign(Runtime.Task.Tasks,
 			var __v0 = use("Runtime.Task.TaskMethod");
 			var Collection = use("Runtime.Collection");
 			var Dict = use("Runtime.Dict");
-			var IntrospectionInfo = use("Runtime.Annotations.IntrospectionInfo");
+			var IntrospectionInfo = use("Runtime.IntrospectionInfo");
 			return new IntrospectionInfo(ctx, {
 				"kind": IntrospectionInfo.ITEM_METHOD,
 				"class_name": "Runtime.Task.Tasks",
